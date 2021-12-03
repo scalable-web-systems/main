@@ -1,12 +1,1 @@
 theme: jekyll-theme-cayman
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
-include:
-  - README.md
-  - TEST1.md
-  - TEST2.md
-
-
