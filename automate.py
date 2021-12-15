@@ -5,8 +5,6 @@ import subprocess
 BASE_URL = "https://github.com/scalable-web-systems/"
 f = open('config.json')
  
-# returns JSON object as
-# a dictionary
 data = json.load(f)
 
 
