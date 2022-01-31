@@ -15,7 +15,6 @@ def get_file_names():
 
 def test_check_comment():
     for file_name in get_file_names():
-        print(file_name)
         with open(file_name, 'r') as f:
             text = f.read()
             first_line = text.split('\n')[0]
