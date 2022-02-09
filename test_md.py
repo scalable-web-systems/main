@@ -1,8 +1,10 @@
 # Get all markdown files in the directory 
+exceptions = ['README.md']
+
+# Herlp Functions
 def get_file_names():
     import os
-
-    exceptions = ['README.md']
+    
     files = os.listdir('.')
     file_names = []
 
@@ -12,7 +14,20 @@ def get_file_names():
             file_names.append(file)
     return file_names
 
+# Check the PR has only Markdown files
+def test_check_only_md():
+    import os
 
+    files = os.listdir('.')
+
+    for file in files:
+        if '.md' not in file:
+            assert False
+    
+    assert True
+
+
+# Check the Markdown file has a comment
 def test_check_comment():
     for file_name in get_file_names():
         with open(file_name, 'r') as f:
@@ -22,3 +37,6 @@ def test_check_comment():
                 assert True
             else: 
                 assert False
+
+
+
